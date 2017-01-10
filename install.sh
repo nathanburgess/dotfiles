@@ -10,7 +10,7 @@ chsh -s /bin/zsh
 
 # Clone Prezto
 echo -e "\n\r \e[36m--\e[32m Cloning Prezto to HOME directory... \e[36m--\e[0m"
-git clone --recursive https://github.com/sorin-ionescu/prezto.git "\$HOME/.zprezto" &> /dev/null
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "$HOME/.zprezto" &> /dev/null
 
 # Create a temporary script to execute with ZSH instead of BASH
 cat > z << EOF
