@@ -33,8 +33,9 @@ echo "\n\r \e[36m--\e[32m Installing Vim-Plug \e[36m--\e[0m"
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim &> /dev/null
 # Install some Vim plugins
 vim -c ":PlugInstall | q | q" 
+
+echo "\e[0m"
 EOF
 
 # Execute and then remove the temporary script
 /bin/zsh z && rm z
-
