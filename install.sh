@@ -36,5 +36,5 @@ vim -c ":PlugInstall | q | q"
 EOF
 
 # Execute and then remove the temporary script
-#/bin/zsh z && rm z
+/bin/zsh z && rm z
 
