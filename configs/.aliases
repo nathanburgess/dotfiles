@@ -9,3 +9,16 @@ alias ll='ls -oaS'
 
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias vg="valgrind --leak-check=full --track-origins=yes"
+
+function serve() {
+    if [[ "$1" && "$2" ]]
+    then
+        sudo bash /vagrant/scripts/create-certificate.sh "$1"
+        sudo dos2unix /vagrant/scripts/serve.sh
+        sudo bash /vagrant/scripts/serve.sh "$1" "$2" 80
+    else
+        echo "Error: missing required parameters."
+        echo "Usage: "
+        echo "  serve domain path"
+    fi
+}
