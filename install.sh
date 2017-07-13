@@ -39,4 +39,6 @@ vim -c ":PlugInstall | q | q"
 
 echo -e "\n\r \e[36m--\e[32m COMPLETE \e[36m--\e[0m\n\r\n\r"
 source ~/.zshrc
-chown ${USER}:${USER} ~/ -R
+
+U=$(who am i | awk '{print $1}')
+chown ${U}:${U} ~/ -R
