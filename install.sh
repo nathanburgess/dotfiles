@@ -39,8 +39,6 @@ vim -c ":PlugInstall | q | q" &> /dev/null
 
 echo -e "\n\r \e[36m--\e[32m COMPLETE \e[36m--\e[0m\n\r\n\r"
 echo -e "\e[32mPlease exit and reconnect to enable the changes.\n\r"
-echo -e "NOTE: If your terminal colors are messed up, use the \"clear\" command after you've exited this session.\e[36m--\e[0m\n\r\n\r"
-source ~/.zshrc
 
 U=$(who am i | awk '{print $1}')
 chown ${U}:${U} ~/ -R
