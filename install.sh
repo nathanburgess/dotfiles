@@ -35,7 +35,7 @@ EOF
 echo -e "\n\r \e[36m--\e[32m Installing Vim-Plug \e[36m--\e[0m"
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim &> /dev/null
 # Install the Vim Plugins from .vimrc
-vim -c ":PlugInstall | q | q" 
+vim -c ":PlugInstall | q | q" &> /dev/null
 
 echo -e "\n\r \e[36m--\e[32m COMPLETE \e[36m--\e[0m\n\r\n\r"
 echo -e "\e[32mPlease exit and reconnect to enable the changes.\n\r"
