@@ -2,8 +2,8 @@
 
 # Update aptitude and install zsh
 echo -e "\n\r \e[36m--\e[32m Updating Aptitude and installing ZSH... \e[36m--\e[0m"
-sudo apt update &> /dev/null
-sudo apt install zsh -y &> /dev/null
+apt update &> /dev/null
+apt install zsh -y &> /dev/null
 
 # Set the user's default shell to ZSH
 chsh -s /bin/zsh
@@ -39,3 +39,4 @@ vim -c ":PlugInstall | q | q"
 
 echo -e "\n\r \e[36m--\e[32m COMPLETE \e[36m--\e[0m\n\r\n\r"
 source ~/.zshrc
+chown ${USER}:${USER} ~/ -R
