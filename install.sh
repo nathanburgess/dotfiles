@@ -41,7 +41,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs  https://raw.githubusercontent.
 vim -c ":PlugInstall | q | q" &> /dev/null
 
 echo -e "\n\r \e[36m--\e[32m COMPLETE \e[36m--\e[0m\n\r\n\r"
-echo -e "\e[32mPlease exit and reconnect to enable the changes.\n\r"
+echo -e "\e[32mPlease exit and reconnect to enable the changes.\e[0m\n\r"
 
 chown ${U}:${U} ~/ -R
 exit
