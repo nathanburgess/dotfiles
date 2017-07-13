@@ -25,7 +25,7 @@ done
 
 # Copy my dotfiles to the HOME directory
 echo "\n\r \e[36m--\e[32m Copying dotfiles to HOME directory \e[36m--\e[0m"
-find configs -type f -print0 | xargs -0 -I file cp -v -p file --target-directory=\$HOME
+find \$HOME/dotfiles/configs -type f -print0 | xargs -0 -I file cp -v -p file --target-directory=\$HOME
 EOF
 
 # Execute and then remove the temporary script
