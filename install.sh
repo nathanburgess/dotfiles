@@ -37,4 +37,6 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs  https://raw.githubusercontent.
 # Install the Vim Plugins from .vimrc
 vim -c ":PlugInstall | q | q" 
 
-echo -e "\n\r \e[36m--\e[32m COMPLETE \e[36m--\e[0m\n\r\n\r\e[32mExit and log back into your shell to see the changes.\e[0m\c"
+echo -e "\n\r \e[36m--\e[32m COMPLETE \e[36m--\e[0m\n\r\n\r\e[32m"
+echo -e "\e[0m\c"
+source ~/.zshrc
