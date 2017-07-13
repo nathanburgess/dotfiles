@@ -1,12 +1,15 @@
 #!/bin/bash
 
+# Capture the current user without sudo messing things up
+U=$(who am i | awk '{print $1}')
+
 # Update aptitude and install zsh
 echo -e "\n\r \e[36m--\e[32m Updating Aptitude and installing ZSH... \e[36m--\e[0m"
 apt update &> /dev/null
 apt install zsh -y &> /dev/null
 
 # Set the user's default shell to ZSH
-chsh -s /bin/zsh
+sudo usermod -s /bin/zsh ${U}
 
 # Clone Prezto
 echo -e "\n\r \e[36m--\e[32m Cloning Prezto to HOME directory... \e[36m--\e[0m"
@@ -40,6 +43,5 @@ vim -c ":PlugInstall | q | q" &> /dev/null
 echo -e "\n\r \e[36m--\e[32m COMPLETE \e[36m--\e[0m\n\r\n\r"
 echo -e "\e[32mPlease exit and reconnect to enable the changes.\n\r"
 
-U=$(who am i | awk '{print $1}')
 chown ${U}:${U} ~/ -R
 exit
