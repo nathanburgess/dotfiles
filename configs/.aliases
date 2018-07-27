@@ -16,6 +16,7 @@ function serve() {
         sudo bash /vagrant/scripts/create-certificate.sh "$1"
         sudo dos2unix /vagrant/scripts/serve.sh
         sudo bash /vagrant/scripts/serve.sh "$1" "$2" 80
+        sudo service nginx restart
     else
         echo "Error: missing required parameters."
         echo "Usage: "
