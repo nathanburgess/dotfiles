@@ -43,11 +43,13 @@ vim -c ":PlugInstall | q | q" &> /dev/null
 echo -e "\n\r \e[36m--\e[32m COMPLETE \e[36m--\e[0m\n\r\n\r"
 echo -e "\e[32mPlease exit and reconnect to enable the changes.\e[0m\n\r"
 
-curl -LO https://github.com/BurntSushi/ripgrep/releases/download/0.10.0/ripgrep_0.10.0_amd64.deb
-curl -LO https://github.com/sharkdp/bat/releases/download/v0.10.0/bat-musl_0.10.0_amd64.deb
-sudo dpkg -i ripgrep_0.10.0_amd64.deb
-sudo dpkg -i bat-musl_0.10.0_amd64.deb
-cargo install exa
+# Download some additional utilities
+echo -e "\n\r \e[36m--\e[32m Installing ripgrep, bat, and exa \e[36m--\e[0m"
+curl -LO https://github.com/BurntSushi/ripgrep/releases/download/0.10.0/ripgrep_0.10.0_amd64.deb &> /dev/null
+curl -LO https://github.com/sharkdp/bat/releases/download/v0.10.0/bat-musl_0.10.0_amd64.deb &> /dev/null
+sudo dpkg -i ripgrep_0.10.0_amd64.deb &> /dev/null
+sudo dpkg -i bat-musl_0.10.0_amd64.deb &> /dev/null
+cargo install exa &> /dev/null
 rm -f ripgrep_0.10.0_amd64.deb bat-musl_0.10.0_amd64.deb
 
 chown ${U}:${U} ~/ -R
