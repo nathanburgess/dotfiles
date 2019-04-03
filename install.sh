@@ -6,7 +6,7 @@ U=$(who am i | awk '{print $1}')
 # Update aptitude and install zsh
 echo -e "\n\r \e[36m--\e[32m Updating Aptitude and installing ZSH... \e[36m--\e[0m"
 apt update &> /dev/null
-apt install zsh cargo -y &> /dev/null
+apt install zsh cargo cmake -y &> /dev/null
 
 # Set the user's default shell to ZSH
 sudo usermod -s /bin/zsh ${U}
